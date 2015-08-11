@@ -31,6 +31,11 @@ class ReactiveArray extends Array
     @depend()
     @[index]
 
+  set: (index, value) ->
+    @[index] = value
+    @changed()
+    @
+
   array: ->
     @depend()
     Array.prototype.slice.call @
