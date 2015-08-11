@@ -27,6 +27,10 @@ class ReactiveArray extends Array
       pause = false
       @changed()
 
+  get: (index) ->
+    @depend()
+    @[index]
+
   array: ->
     @depend()
     Array.prototype.slice.call @
