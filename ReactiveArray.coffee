@@ -68,7 +68,11 @@ class ReactiveArray extends Array
     @changed()
     item
 
+  first: ->
+    @get 0
 
+  last: ->
+    @get @length - 1
 
   remove: (valueOrPredicate) ->
     underlyingArray = @
